@@ -1,0 +1,13 @@
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/bin/Debug/netstandard2.0/MusixMatchApiService.deps.json
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/bin/Debug/netstandard2.0/MusixMatchApiService.dll
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/bin/Debug/netstandard2.0/MusixMatchApiService.pdb
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/Views/LyricsPage.xaml.g.cs
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.csproj.CoreCompileInputs.cache
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.AssemblyInfoInputs.cache
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.AssemblyInfo.cs
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.dll
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.pdb
+/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.csprojAssemblyReference.cache
