@@ -7,27 +7,27 @@ namespace MusixMatchApiService.Models
 
         public class Header
         {
-            public int status_code { get; set; }
-            public double execute_time { get; set; }
+            public int Status_code { get; set; }
+            public double Execute_time { get; set; }
         }
         public class Lyrics
         {
-            public int lyrics_id { get; set; }
-            public int explicit_ { get; set; }
-            public string lyrics_body { get; set; }
-            public string script_tracking_url { get; set; }
-            public string pixel_tracking_url { get; set; }
-            public string lyrics_copyright { get; set; }
-            public DateTime updated_time { get; set; }
+            public int Lyrics_id { get; set; }
+            public int Explicit_ { get; set; }
+            public string Lyrics_body { get; set; }
+            public string Script_tracking_url { get; set; }
+            public string Pixel_tracking_url { get; set; }
+            public string Lyrics_copyright { get; set; }
+            public DateTime Updated_time { get; set; }
         }
         public class Body
         {
-            public Lyrics lyrics { get; set; }
+            public Lyrics Lyrics { get; set; }
         }
         public class Message
         {
-            public Header header { get; set; }
-            public Body body { get; set; }
+            public Header Header { get; set; }
+            public Body Body { get; set; }
         }
     }
 }

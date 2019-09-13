@@ -17,7 +17,6 @@ namespace MusixMatchApiService.ViewModels
         public SearchModel search {get;set;}
         public ICommand GetLyricsCommand { get; set; }
         IApiService apiService = new ApiServices();
-        public MusicData lyrics { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
 
         public SearchViewModel()
@@ -33,16 +32,15 @@ namespace MusixMatchApiService.ViewModels
         {
             try
             {
-                lyrics = new MusicData();
-                var current = Connectivity.NetworkAccess;
-                if (current == NetworkAccess.Internet)
+                var Current = Connectivity.NetworkAccess;
+                if (Current == NetworkAccess.Internet)
                 {
 
-                    var rate = await apiService.GetMusicData(Artist, Title);
+                    var Response = await apiService.GetMusicData(Artist, Title);
 
-                    if (rate != null)
+                    if (Response != null)
                     {
-                        await Application.Current.MainPage.Navigation.PushAsync(new LyricsPage(rate.message.body.lyrics.lyrics_body));
+                        await Application.Current.MainPage.Navigation.PushAsync(new LyricsPage(Response.message.Body.Lyrics.Lyrics_body));
                     }
                 }
                 else
@@ -50,7 +48,7 @@ namespace MusixMatchApiService.ViewModels
                     await Application.Current.MainPage.DisplayAlert("Error", "You don't have internet connection", "Ok");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", "Unable to connect to the server", "Ok");
             }

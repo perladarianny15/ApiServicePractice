@@ -10,28 +10,22 @@ namespace MusixMatchApiService.Services
 {
     public class ApiServices : IApiService
     {
+        public string ApiKey = "aa2ae8cce618bff1f84b172ea0c75787";
         public async Task<MusicData> GetMusicData(string Artist, string Title)
         {
-            string result;
             MusicData ReturnedMusicData = new MusicData();
             try
             {
-                using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
+                HttpClient httpClient = new HttpClient();
+                var response = await httpClient.GetStringAsync($"http://api.musixmatch.com/ws/1.1/matcher.lyrics.get?apikey={ApiKey}&format=json&q_track={Title}&q_artist={Artist}");
+                
+                ReturnedMusicData = JsonConvert.DeserializeObject<MusicData>(response);
+
+                if (ReturnedMusicData.message.Body == null)
                 {
-                    client.BaseAddress = new Uri("http://api.musixmatch.com/ws/1.1/");
-                    client.DefaultRequestHeaders.Accept.Clear();
-
-                    HttpResponseMessage response = client.GetAsync($"matcher.lyrics.get?apikey=aa2ae8cce618bff1f84b172ea0c75787&format=json&q_track={Title}&q_artist={Artist}").Result;
-                    
-                    result = response.Content.ReadAsStringAsync().Result;
-                    
-                    ReturnedMusicData = JsonConvert.DeserializeObject<MusicData>(result);
-
-                    if (ReturnedMusicData.message == null)
-                    {
-                        ReturnedMusicData.message.body.lyrics.lyrics_body = "Could not get the Lyrics of the song";
-                    }
+                    ReturnedMusicData.message.Body.Lyrics.Lyrics_body = "Could not get the Lyrics of the song";
                 }
+            
 
             }
             catch (Exception ex)

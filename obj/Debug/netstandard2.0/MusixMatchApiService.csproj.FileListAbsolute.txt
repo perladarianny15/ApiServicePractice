@@ -10,4 +10,3 @@
 /Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.dll
 /Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.pdb
-/Users/admin/Projects/MusixMatchApiService/MusixMatchApiService/obj/Debug/netstandard2.0/MusixMatchApiService.csprojAssemblyReference.cache
