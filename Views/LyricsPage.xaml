@@ -2,10 +2,17 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=netstandard"
+    NavigationPage.HasNavigationBar="True"
+    NavigationPage.HasBackButton="True"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    ios:Page.UseSafeArea="True"
     x:Class="MusixMatchApiService.Views.LyricsPage">
     <ScrollView>
-       <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="20"> 
-           <Label Text="{Binding Result, Mode=TwoWay}" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+       <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="20">
+           <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}" TextColor="white" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+
+           <Label Text="{Binding Result, Mode=TwoWay}" TextColor="white" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
         </StackLayout>
    </ScrollView>
 </ContentPage>

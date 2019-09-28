@@ -21,4 +21,11 @@
     <Folder Include="Views\" />
     <Folder Include="Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\LoginPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\LoginPage.xaml.cs" />
+    <Compile Remove="ViewModels\LoginViewModel.cs" />
+  </ItemGroup>
 </Project>

@@ -4,13 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
              x:Class="MusixMatchApiService.MainPage">
 
     <ScrollView>
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="10">
-            <Image Source="music1.jpg" HeightRequest="180" WidthRequest="200"></Image>
-            <Entry Text="{Binding search.Artist}" Placeholder="Artist" HeightRequest="35"/>
-            <Entry Text="{Binding search.Title}" Placeholder="Title of the song" HeightRequest="35"/>
+            <Image Source="transparent.png" HeightRequest="180" WidthRequest="200" BackgroundColor="Transparent"/>
+            <Entry Text="{Binding search.Artist}" Placeholder="Artist" HeightRequest="35" BackgroundColor="transparent" TextColor="White"/>
+            <Entry Text="{Binding search.Title}" Placeholder="Title of the song" HeightRequest="35" BackgroundColor="transparent" TextColor="white"/>
 
             <Button Text="Search" Command="{Binding GetLyricsCommand}" BackgroundColor="LightPink" TextColor="White" />
         </StackLayout>
